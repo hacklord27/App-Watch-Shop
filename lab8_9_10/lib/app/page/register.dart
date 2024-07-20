@@ -71,8 +71,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
             decoration: BoxDecoration(
               gradient: RadialGradient(
                 colors: [
-                  Color.fromRGBO(0, 255, 255, 1).withOpacity(0.5),
-                  Colors.transparent,
+                  Color.fromRGBO(246, 229, 167, 1),
+                  Colors.white70,
                 ],
                 radius: 1.0,
                 center: Alignment.center,
@@ -91,16 +91,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     'assets/images/logoapp.png',
                     errorBuilder: (context, error, stackTrace) =>
                         const Icon(Icons.image),
-                    width: 100,
-                    height: 50,
+                     width: 300,
+                    height: 270,
                   ),
                   const SizedBox(height: 20),
                   const Text(
-                    'Thông tin Đăng ký',
+                    'Đăng ký',
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
-                      color: Colors.blue,
+                      color: Colors.black,
                     ),
                   ),
                   const SizedBox(height: 20),
@@ -109,24 +109,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   _buildTextField(_passwordController, 'Mật khẩu', Icons.lock),
                   _buildTextField(_confirmPasswordController,
                       'Xác nhận Mật khẩu', Icons.lock),
-                  _buildTextField(
-                      _fullNameController, 'Họ và Tên', Icons.person_outline),
-                  _buildTextField(_numberIDController, 'Số CMND',
-                      Icons.format_list_numbered),
-                  _buildTextField(
-                      _phoneNumberController, 'Số điện thoại', Icons.phone),
-                  _buildTextField(
-                      _birthDayController, 'Ngày sinh', Icons.date_range),
-                  _buildTextField(
-                      _schoolYearController, 'Năm học', Icons.school),
-                  _buildTextField(
-                      _schoolKeyController, 'Mã năm học', Icons.school),
-                  const SizedBox(height: 16),
-                  _buildGenderSelection(),
-                  const SizedBox(height: 16),
-                  _buildTextField(
-                      _imageURLController, 'URL hình ảnh', Icons.image),
-                  const SizedBox(height: 20),
                   _buildRegisterButton(),
                   const SizedBox(height: 16),
                   TextButton(
@@ -156,7 +138,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         Text(
                           "Đăng nhập",
                           style: TextStyle(
-                            color: Colors.cyan, // Màu cyan
+                            color:  const Color.fromARGB(
+                                255, 230, 178, 81), // Màu cyan
                             fontSize: 16,
                           ),
                         ),
@@ -266,7 +249,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           }
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor: Colors.cyan, // Màu nền của nút
+          backgroundColor:  const Color.fromARGB( 255, 230, 178, 81), // Màu nền của nút
           foregroundColor: Colors.white,
         ),
         child: const Padding(
